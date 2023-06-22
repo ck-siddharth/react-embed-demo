@@ -1,10 +1,11 @@
 import React from 'react';
-import Embed from './Embed';
+import EmbedComponent from './EmbedComponent';
 
 const App = () => {
   return (
     <div>
-      <Embed dataId="001" />
+      {/* Other content */}
+      <EmbedComponent dataId="001" />
     </div>
   );
 };

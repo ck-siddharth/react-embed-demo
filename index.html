@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Embedded React App</title>
+</head>
+<body>
+  <div id="embeddedContent"></div>
+  <script src="https://your-hosted-url/bundle.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      ReactDOM.render(
+        React.createElement(EmbedComponent, { dataId: '001' }),
+        document.getElementById('embeddedContent')
+      );
+    });
+  </script>
+</body>
+</html>
