@@ -10,21 +10,17 @@ const EmbedComponent = ({ dataId }) => {
     const headings = data[dataId];
 
     if (headings) {
-      const ulElement = document.createElement('ul');
-
-      headings.forEach((heading) => {
-        const liElement = document.createElement('li');
-        liElement.textContent = heading;
-        ulElement.appendChild(liElement);
-      });
+      const listItems = headings.map((heading, index) => (
+        <li key={index}>{heading}</li>
+      ));
 
       const element = document.getElementById('headings');
       element.innerHTML = '';
-      element.appendChild(ulElement);
+      element.append(...listItems);
     }
   }, [dataId]);
 
-  return <div id="headings" />;
+  return <div id="headings"></div>;
 };
 
 export default EmbedComponent;
